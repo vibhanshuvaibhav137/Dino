@@ -42,7 +42,7 @@ import userRoutes from "./routes/user.routes.js";
 // Route Declarations
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/scores", scoreRoutes);
-app.use("/api/v1/users", userRoutes);
+app.use("/api/v1/user", userRoutes);
 
 // Health Check
 app.get("/api/v1/health", (req, res) => {
