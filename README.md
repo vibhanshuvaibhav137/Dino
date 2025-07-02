@@ -57,8 +57,10 @@ npm run dev
 
 ### 3. Frontend Setup
 
+Open new terminal:
+
 ```bash
-cd ../Frontend
+cd Frontend
 npm install
 ```
 
