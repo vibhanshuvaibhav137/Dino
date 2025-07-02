@@ -42,7 +42,7 @@ Create a `.env` file in `Backend/`:
 
 ```
 PORT=8000
-MONGO_URI=mongodb://localhost:27017/ballrunner
+MONGO_URI=mongodb://localhost:27017 (your mongoDB url)
 ACCESS_TOKEN_SECRET=your_jwt_secret
 ACCESS_TOKEN_EXPIRY=7d
 CORS_ORIGIN=http://localhost:3000
@@ -203,11 +203,16 @@ Dino/
 
 ## 🖼️ Screenshots
 
-<!-- Optionally add screenshots here -->
-<!-- 
-![Game Menu](screenshots/game_menu.png)
-![Gameplay](screenshots/gameplay.png)
--->
+### Homepage 
+![Homepage](https://github.com/vibhanshuvaibhav137/ScoreCard-App/blob/02ad62e4a791975215786f191024a79efa24836a/ig1.png)
+
+
+### Game Play
+![Game Play](https://github.com/vibhanshuvaibhav137/ScoreCard-App/blob/02ad62e4a791975215786f191024a79efa24836a/ig2.png)
+
+
+### Leaderboard and Scores
+![Leaderboard and Scores](https://github.com/vibhanshuvaibhav137/ScoreCard-App/blob/02ad62e4a791975215786f191024a79efa24836a/ig3.png)
 
 ---
 
