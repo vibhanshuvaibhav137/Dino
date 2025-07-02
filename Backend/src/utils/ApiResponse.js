@@ -1,3 +1,6 @@
+
+// Standardized API Response Class for Consistent Client Communication
+
 class ApiResponse {
     constructor(statusCode, data, message = "Success"){
         this.statusCode = statusCode

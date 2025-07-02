@@ -4,6 +4,12 @@ import { getLeaderboard, getUserScores, submitScore, syncOfflineScores } from ".
 
 const router = Router();
 
+// Score routes for :
+// - submit score
+// - sync offline scores
+// - get leaderboard
+// - get user score
+
 router.post('/', verifyJWT, submitScore)
 router.post('/sync', verifyJWT, syncOfflineScores)
 router.get('/leaderboard', getLeaderboard)

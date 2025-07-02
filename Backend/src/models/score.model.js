@@ -3,7 +3,6 @@ import mongooseAggregatePaginate from "mongoose-aggregate-paginate-v2";
 
 
 // Score Schema for storing game scores
-
 const scoreSchema = new Schema({
     userId: {
       type: mongoose.Schema.Types.ObjectId,

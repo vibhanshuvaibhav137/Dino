@@ -142,6 +142,7 @@ const getLeaderboard = asyncHandler(async (req, res) => {
     );
 });
 
+// Get User Score
 const getUserScores = asyncHandler(async (req, res) => {
     const userId = req.user.userId;
     const limit = parseInt(req.query.limit) || 20;

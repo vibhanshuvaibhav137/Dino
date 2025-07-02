@@ -1,10 +1,9 @@
 import mongoose, {Schema} from "mongoose";
 import jwt from "jsonwebtoken";
 
-/**
- * User Schema for browser-based authentication
- * Each browser gets a unique user profile
- */
+
+// User Schema for browser-based authentication
+
 const userSchema = new Schema({
   browserId: {
     type: String,
@@ -46,9 +45,7 @@ userSchema.pre('save', function(next) {
   next();
 });
 
-
-
-
+// function to generate access token
 userSchema.methods.generateAccessToken = function(){
     return jwt.sign(
         {
