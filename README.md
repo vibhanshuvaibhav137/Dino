@@ -42,10 +42,11 @@ Create a `.env` file in `Backend/`:
 
 ```
 PORT=8000
-MONGO_URI=mongodb://localhost:27017 (your mongoDB url)
+MONGODB_URL=mongodb://localhost:27017 (your mongoDB url without "/" in the end)
 ACCESS_TOKEN_SECRET=your_jwt_secret
 ACCESS_TOKEN_EXPIRY=7d
 CORS_ORIGIN=http://localhost:3000
+NODE_ENV="development"
 ```
 
 Start the backend:
