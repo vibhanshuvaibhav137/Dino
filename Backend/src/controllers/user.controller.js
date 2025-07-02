@@ -83,11 +83,14 @@ const registerUser = asyncHandler(async (req, res) => {
         );
     }
 
-    user = await User.create({
-        browserId,
-        browserFingerprint,
-        userAgent,
-    });
+    user = await User.findOne({ browserId });
+    if (!user) {
+        user = await User.create({
+            browserId,
+            browserFingerprint,
+            userAgent,
+        });
+    }
 
     const token = await generateAccessToken(user._id);
 
@@ -109,10 +112,17 @@ const registerUser = asyncHandler(async (req, res) => {
 // Login existing user
 const loginUser = asyncHandler(async (req, res) => {
     const browserId = generateBrowserId(req);
-    const user = await User.findOne({ browserId });
+    let user = await User.findOne({ browserId });
 
     if (!user) {
-        throw new ApiError(404, "User not found. Please register first.");
+        const userAgent = req.get("User-Agent") || "";
+        const browserFingerprint = req.body.fingerprint || browserId;
+
+        user = await User.create({
+            browserId,
+            browserFingerprint,
+            userAgent,
+        });
     }
 
     user.lastActive = new Date();
