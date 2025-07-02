@@ -60,7 +60,7 @@ const userProfile = asyncHandler(async (req, res) => {
 const registerUser = asyncHandler(async (req, res) => {
     const browserId = generateBrowserId(req);
     const userAgent = req.get("User-Agent") || "";
-    const browserFingerprint = req.body.fingerprint || browserId;
+    const browserFingerprint = req.body?.fingerprint || browserId;
 
     let user = await User.findOne({ browserId });
 
@@ -116,7 +116,7 @@ const loginUser = asyncHandler(async (req, res) => {
 
     if (!user) {
         const userAgent = req.get("User-Agent") || "";
-        const browserFingerprint = req.body.fingerprint || browserId;
+        const browserFingerprint = req.body?.fingerprint || browserId;
 
         user = await User.create({
             browserId,
