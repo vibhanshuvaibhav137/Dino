@@ -8,7 +8,7 @@ export default defineConfig({
     host: true,
     proxy: {
       '/api': {
-        target: import.meta.env.PROXY ,
+        target: 'https://dino-delta-six.vercel.app',
         changeOrigin: true,
         secure: false,
       },
