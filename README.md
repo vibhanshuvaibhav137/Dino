@@ -6,6 +6,12 @@ In Ball Runner, players control a ball, jump over obstacles, and aim to beat the
 
 ---
 
+## 🌐 Live Demo
+
+**Play Ball Runner now:** [https://ball-runner-app.vercel.app/](https://ball-runner-app.vercel.app/)
+
+---
+
 ## 📝 Project Overview
 
 - **Endless runner gameplay** with smooth controls and increasing difficulty.
